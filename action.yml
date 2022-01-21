@@ -1,0 +1,18 @@
+name: 'AptyInc'
+description: 'Provide a description here'
+author: 'SaiUmesh Dhanewar'
+inputs:
+  REGION:
+    description: "BRANCH_NAME"
+    required: true
+  BRANCH_NAME:
+    description: "BRANCH_NAME"
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+outputs:
+   EKS_NAME:
+    description: EKS_NAME
+   CROSS_ACCOUNT:
+    description: CROSS_ACCOUNT
