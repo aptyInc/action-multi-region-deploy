@@ -8,7 +8,7 @@ import (
 )
 
 func runMain() {
-	region := os.Getenv("REGION")
+	region := os.Getenv("AWS_REGION")
 	branchName := os.Getenv("BRANCH_NAME")
 
 	macBuildBranches := []string{"staging", "production", "labs"}
@@ -17,7 +17,7 @@ func runMain() {
 	IS_MAC_BUILD_BRANCH := "false"
 
 	if region == "" || branchName == "" {
-		log.Fatal("REGION and BRANCH_NAME must be set")
+		log.Fatal("AWS_REGION and BRANCH_NAME must be set")
 	}
 
 	if branchName == "production" && region != "us-east-1" {
