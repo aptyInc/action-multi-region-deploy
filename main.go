@@ -11,7 +11,7 @@ func runMain() {
 	region := os.Getenv("AWS_REGION")
 	branchName := os.Getenv("BRANCH_NAME")
 
-	macBuildBranches := []string{"staging", "production", "labs"}
+	macBuildBranches := []string{"staging", "production", "labs", "qa1"}
 
 	IS_CROSS_REGION := "false"
 	IS_MAC_BUILD_BRANCH := "false"
